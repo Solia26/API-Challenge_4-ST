@@ -4,17 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/blog.css">
 </head>
 <body>
-    <button id="switch">Switch</button>
-
-    <h1>This is the POSTS page</h1>
-
-    <div id="container">
+    <header class="header">
+        <div class="container headerContainer">
+        <p class="headerTitle">My first blog</p>
+       <button id="switch">Switch</button> </div>
+    </header>
+    <main class="blogWrapper ">
+        <div class="container">
+         <div  id="container"></div>
+         </div>
 
     </div>
-
-
+ </main>
+<footer class="footer">
+    <div class="container">
+        <p class="footerTitle">Made with <svg class="footerIcon" width="20" height="20">
+            <use href="./assets/img/symbol-defs.svg#icon-heart"></use>
+        </svg> by Solomiia</p>
+       
+            <ul class="addressList">
+                <li><span class="addressName">Portfolio: </span><a href="" class="addressLink">Solomiia</a></li>
+                <li><span class="addressName">Blog: </span><a href="" class="addressLink">Full-Stack Blog</a></li>
+                <li><span class="addressName">Email: </span><a href="mailto:solomiia0403@gmail.com" class="addressLink">solomiia0403@gmail.com</a></li>
+            </ul>
+  
+    </div>
+</footer>
     <script src="./assets/js/blog.js"></script>
 </body>
 </html>

@@ -1,0 +1,96 @@
+
+.header {
+    padding: 20px 0;
+    border-bottom: 3px #000 solid;
+
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.headerTitle {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#switch{
+    background-color: #000;
+    height: 30px;
+    width: 60px;
+    color: #fff;
+}
+.blogWrapper {
+    margin-top: 10px;
+    border-top: 3px #000 solid;
+    border-bottom: 3px #000 solid;
+    padding: 16px 0;
+    margin-bottom: 6px;
+}
+
+#container > div {
+    border: 1px #000 solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80px;
+    border-radius: 4px;
+    justify-content: space-between;
+}
+#container > div > .username {
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+
+}
+#container > div > .username::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #636363;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+
+}
+#container > div > .title {
+    color: #636363;
+    
+}
+
+.footer {
+    border-top: 3px #000 solid;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+}
+.container {
+}
+.footerTitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.addressList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-style: italic;
+}
+.addressName {
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 20px;
+}
+.addressLink {
+font-size: 20px;
+font-weight: 400;
+color: #000;
+}
+
+.footerIcon{
+fill: red;
+}
