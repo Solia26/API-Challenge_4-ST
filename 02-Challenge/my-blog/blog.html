@@ -21,7 +21,12 @@
     <header class="header">
         <div class="container headerContainer">
         <p class="headerTitle">My first blog</p>
-       <button id="switch">Switch</button> </div>
+        <a href="./index.html">Back</a>
+        <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+    </div>
     </header>
     <main class="blogWrapper ">
         <div class="container">
@@ -47,3 +52,4 @@
     <script src="./assets/js/blog.js"></script>
 </body>
 </html>
+

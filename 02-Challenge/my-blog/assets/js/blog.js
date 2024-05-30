@@ -1,38 +1,48 @@
+const myContainer = document.querySelector("#container")
 const savedData = JSON.parse(localStorage.getItem("sampleData"))
 
 console.log(savedData)
+const data = []
+for (const note of savedData) {
+    const markup = `<div><p class="username">${note.username}</p>
+    <p class="title">${note.title}</p>
+    <p class="content">${note.content}</p>
+    </div>` 
+    data.push (markup)
+}
 
-
-// const dummyData = document.querySelector("#dummy-data");
-
-// dummyData.textContent = savedData
-
-//    <div>
-//        <p class="username">Sample username</p>
-//        <p class="title">Sample title</p>
-//    </div>
-
-const myDiv = document.createElement("div")
-
-const p1 = document.createElement("p")
-p1.classList.add("username")
-p1.textContent = savedData.username
-
-const p2 = document.createElement("p")
-p2.classList.add("title")
-p2.textContent = savedData.title
-
-myDiv.appendChild(p1)
-myDiv.appendChild(p2)
-
-
-const myContainer = document.querySelector("#container")
-
-myContainer.appendChild(myDiv)
+myContainer.insertAdjacentHTML(`beforeend`,data.join(''))
 
 
 
-document.querySelector("#switch").addEventListener("click", function() {
-    document.querySelector("body").style.backgroundColor ="black"
-    document.querySelector("body").style.color ="white"
-})
+
+// document.querySelector("#switch").addEventListener("click", function() {
+//     document.querySelector("body").style.backgroundColor ="black"
+//     document.querySelector("body").style.color ="white"
+// })
+
+ // function to set a given theme/color-scheme
+ function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+}
+
+// function to toggle between light and dark theme
+function toggleTheme() {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-light');
+    } else {
+        setTheme('theme-dark');
+    }
+}
+
+// Immediately invoked function to set the theme on initial load
+(function () {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-dark');
+        document.getElementById('slider').checked = false;
+    } else {
+        setTheme('theme-light');
+      document.getElementById('slider').checked = true;
+    }
+})();
